@@ -2,5 +2,10 @@
   "name": "Artem",
   "age": 39,
   "country": "Ukraine",
-  "city": "Kyiv"
+  "city": "Kyiv",
+  "family": {
+    "child": {
+      "name": "Nikita",
+	  "age": 7
+    }
 }
