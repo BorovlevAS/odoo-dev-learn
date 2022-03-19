@@ -15,6 +15,10 @@
 	"wife": {
 		"name": "Natalia",
 		"age": 33
-	}
+	},
+    "mother": {
+      "name": "Tamara",
+      "age": "62"
+    }
   }
 }
