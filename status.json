@@ -8,8 +8,17 @@
       "name": "Nikita",
 	    "age": 7
     },
+    "child": {
       "name": "Kira",
       "age": 9
+    },
+    "sister": {
+      "name": "Helen",
+      "age": 35
+    },
+    "mother": {
+      "name": "Tamara",
+      "age": "62"
     }
   }
 }
