@@ -5,6 +5,9 @@
   "city": "Kyiv",
   "family": {
     "child": {
+      "name": "Nikita",
+	    "age": 7
+    },
       "name": "Kira",
       "age": 9
     }
