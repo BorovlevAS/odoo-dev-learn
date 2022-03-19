@@ -5,11 +5,16 @@
   "city": "Kyiv",
   "family": {
     "child": {
-      "name": "Nikita",
+		"name": "Nikita",
 	    "age": 7
     },
-      "name": "Kira",
-      "age": 9
-    }
+    "child": {
+		"name": "Kira",
+		"age": 9
+    },
+	"wife": {
+		"name": "Natalia",
+		"age": 33
+	}
   }
 }
