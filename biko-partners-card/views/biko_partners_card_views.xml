@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="biko_partners_card_action">
+      <field name="name">BIKO partners card window</field>
+      <field name="res_model">biko.partners.card</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="bas-real-estate.action_server">
+      <field name="name">bas-real-estate server</field>
+      <field name="model_id" ref="model_bas-real-estate_bas-real-estate"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="bas-real-estate" id="bas-real-estate.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="bas-real-estate.menu_1" parent="bas-real-estate.menu_root"/>
+    <menuitem name="Menu 2" id="bas-real-estate.menu_2" parent="bas-real-estate.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="bas-real-estate.menu_1_list" parent="bas-real-estate.menu_1"
+              action="bas-real-estate.action_window"/>
+    <menuitem name="Server to list" id="bas-real-estate" parent="bas-real-estate.menu_2"
+              action="bas-real-estate.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Top menu item -->
+    <!--
+        This menu item's purpose is to overwrite another one defined in
+        the base module in order to set new groups.
+    -->
+    <menuitem
+        id="biko_apps_menu_root"
+        name="BIKO"/>
+
+    <!-- (MAIN USER MENU) -->
+    <menuitem
+        id="biko_apps_partners"
+        name="BIKO: partners"
+        parent="biko_apps_menu_root"
+        sequence="1"/>
+    <menuitem
+        id="biko_partners_cards"
+        name="Partners Cards"
+        parent="biko_apps_partners"
+        action="biko_partners_card_action"
+        sequence="2"/>
+</odoo>
