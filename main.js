@@ -3,6 +3,10 @@
 
 const tPost = {
 	author: 'Artem',
+	defs: {
+		main1: 'main1',
+		main2: 'main2'
+	}
 };
 
 const fnAddPost = (tPost, sMessage, dateAdd = Date()) => {
@@ -12,9 +16,11 @@ const fnAddPost = (tPost, sMessage, dateAdd = Date()) => {
 		dateAdd
 	}
 	
-	console.log(newPost);
+	newPost.defs.main1 = 'Here';
 	
 	return newPost;
 }
+const aPost = fnAddPost(tPost, 'Hi there!');
 
-console.log(fnAddPost(tPost, 'Hi there!'));
+console.log(aPost);
+console.log(tPost);
