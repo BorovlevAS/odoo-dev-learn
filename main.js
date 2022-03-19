@@ -1,6 +1,3 @@
-# some comment line
-# prev code was wrong
-
 const tPost = {
 	author: 'Artem',
 	defs: {
