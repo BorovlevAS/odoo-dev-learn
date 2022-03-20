@@ -6,7 +6,7 @@ class BikoPartnersCard(models.Model):
     _name = "biko.partners.card"
     _description = "BIKO partners card model"
 
-    active = fields.Boolean('Active', readonly=True)
+    active = fields.Boolean('Active', readonly=True, default=True)
     name = fields.Char('Name', required = True, translate = True)
     address = fields.Char('Organization Address', required=False, translate=True)
     phone = fields.Char('Phone #')
@@ -20,6 +20,7 @@ class BikoPartnersCard(models.Model):
 
     partnerType = fields.Selection(
         string='Type',
-        selection=[('start', 'New'), ('work', 'In progress'), ('stop', 'Wnd of work')],
-        help="Type is used to separate partners")
+        selection=[('start', 'New'), ('work', 'In progress'), ('stop', 'End of work')],
+        help="Type is used to separate partners", default='start')
 
+    software_ids = fields.Many2many('biko.software', 'partner_id', string='Software List')

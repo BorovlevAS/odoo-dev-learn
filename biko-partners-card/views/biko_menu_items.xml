@@ -22,4 +22,17 @@
         parent="biko_apps_partners"
         action="biko_partners_card_action"
         sequence="2"/>
+
+    <menuitem
+        id = "biko_settings"
+        name = "Configuration"
+        parent="biko_apps_menu_root"
+        sequence="1"
+        />
+    <menuitem
+        id="biko_software"
+        name="Software List"
+        parent="biko_settings"
+        action="biko_software_action"
+        sequence="2"/>
 </odoo>

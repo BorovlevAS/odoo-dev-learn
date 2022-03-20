@@ -1,0 +1,12 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="biko_software_action">
+      <field name="name">BIKO Software List</field>
+      <field name="res_model">biko.software</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>
