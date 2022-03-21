@@ -1,8 +1,8 @@
 <odoo>
   <data>
-    <record model = "ir.actions.act_window" id = "biko_oa_courses_action_window">
+    <record model = "ir.actions.act_window" id = "biko_oa_courses_list_action_window">
       <field name="name">BIKO Open Academy: courses</field>
-      <field name="res_model">biko_oa_course.biko_oa_course</field>
+      <field name="res_model">biko.oa.course</field>
       <field name="view_mode">tree,view</field>
     </record>
 <!--

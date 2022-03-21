@@ -1,3 +1,15 @@
 <odoo>
 
+    <menuitem
+        id="biko_oa_root"
+        name="BIKO: Open Academy"
+        sequence="25"/>
+
+    <menuitem
+        id="biko_oa_courses"
+        name="Courses"
+        parent="biko_oa_root"
+        action="biko_oa_courses_list_action_window"
+        sequence="1"/>
+
 </odoo>
