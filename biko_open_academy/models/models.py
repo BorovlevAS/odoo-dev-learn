@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class bas-test-module(models.Model):
-#     _name = 'bas-test-module.bas-test-module'
-#     _description = 'bas-test-module.bas-test-module'
+# class biko_open_academy(models.Model):
+#     _name = 'biko_open_academy.biko_open_academy'
+#     _description = 'biko_open_academy.biko_open_academy'
 
 #     name = fields.Char()
 #     value = fields.Integer()

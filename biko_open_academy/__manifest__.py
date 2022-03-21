@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "BIKO: partners",
+    'name': "BIKO_open_academy",
 
-    'summary': 'Addon for working with partners',
+    'summary': """
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        some text here
+        Long description of module's purpose
     """,
 
-    'author': "BIKO",
+    'author': "My Company",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing

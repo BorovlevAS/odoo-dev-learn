@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_bas-test-module_bas-test-module,bas-test-module.bas-test-module,model_bas-test-module_bas-test-module,base.group_user,1,1,1,1
