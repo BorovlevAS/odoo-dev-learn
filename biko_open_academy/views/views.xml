@@ -3,7 +3,7 @@
     <record model = "ir.actions.act_window" id = "biko_oa_courses_list_action_window">
       <field name="name">BIKO Open Academy: courses</field>
       <field name="res_model">biko.oa.course</field>
-      <field name="view_mode">tree,view</field>
+      <field name="view_mode">tree,form</field>
     </record>
 <!--
     <record model="ir.actions.act_window" id="biko_open_academy.action_window">
