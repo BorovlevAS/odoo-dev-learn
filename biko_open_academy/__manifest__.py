@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "BIKO: open academy 15.0.4",
+    'name': "BIKO: open academy 15.1.0.5",
 
     'summary': """
-        Тестовый модуль
+        BIKO: open academy
         """,
 
     'description': """
-        Обучение по разработке модулей для ODOO
+        BIKO: open academy
     """,
 
     'author': "BIKO",
@@ -17,14 +17,14 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '15.0.4',
+    'version': '1.0.5',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/menus.xml',
         'views/templates.xml',
@@ -33,4 +33,9 @@
     'demo': [
         'demo/demo.xml',
     ],
+
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
 }

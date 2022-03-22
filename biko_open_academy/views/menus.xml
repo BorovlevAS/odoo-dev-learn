@@ -4,17 +4,17 @@
         id="biko_oa_root"
         name="BIKO: Open Academy"/>
 
-    <menuitem
+<!--    <menuitem
         id="biko_oa_courses_mm"
         name="Courses"
-        parent="biko_apps_menu_root"
+        parent="biko_oa_root"
         sequence="1"/>
-
+-->
     <menuitem
         id="biko_ao_courses"
         name="Courses"
-        parent="biko_oa_courses_mm"
-        action="biko_oa_courses_list_action_window"
-        sequence="1"/>
+        parent="biko_oa_root"
+        action="act_biko_oa_courses_list"
+        sequence="2"/>
 
 </odoo>
