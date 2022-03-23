@@ -1,0 +1,105 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="act_biko_oa_courses_list">
+            <field name="name">Cources</field>
+            <field name="res_model">biko.oa.course</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Course in your course's list
+                </p>
+                <p>
+                    Odoo helps you track all activities related to your courses.
+                </p>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_courses_tree" model="ir.ui.view">
+            <field name="name">biko.oa.course.tree</field>
+            <field name="model">biko.oa.course</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Title"/>
+                    <field name="description" string="Description"/>
+                    <field name="respUser" string="Responsible user"/>
+                    <field name="instructor" string="Instructor"/>
+                    <field name="session_id" string="Session"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_courses_kanban" model="ir.ui.view">
+            <field name="name">biko.oa.course.kanban</field>
+            <field name="model">biko.oa.course</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                                    <field name="active" invisible="1"/>
+                                    <ul>
+                                        <li>
+                                            <h3><field name="name"/></h3>
+                                        </li>
+                                        <li><field name="description"/></li>
+                                        <li><strong>Responsible user:</strong> <field name="respUser"/></li>
+                                        <li><strong>Instructor:</strong> <field name="instructor"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_courses_form" model="ir.ui.view">
+            <field name="name">biko.oa.course.form</field>
+            <field name="model">biko.oa.course</field>
+            <field name="arch" type="xml">
+                <form string = "Course">
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <h1>
+                            <field class="o_text_overflow" name="name" default_focus="1" placeholder="e.g. Full Stack Web Development Bootcamp" attrs="{'required' : True}"/>
+                        </h1>
+                        <separator string="Details"/>
+                        <group colspan="2">
+                            <group col="1">
+                                <field name="respUser" string="Responsible user"/>
+                                <field name="instructor" string="Instructor"/>
+                            </group>
+                            <group col="1">
+                                <field name="session_id" string="Session"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" placeholder="Description of the course..."/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="search_biko_oa_courses" model="ir.ui.view">
+            <field name="name">biko.oa.course.search</field>
+            <field name="model">biko.oa.course</field>
+            <field name="arch" type="xml">
+                <search string="Search Courses">
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
