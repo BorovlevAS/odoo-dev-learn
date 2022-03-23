@@ -25,7 +25,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
+        'views/biko_oa_cources_views.xml',
+        'views/biko_oa_sessions_views.xml',
         'views/menus.xml',
         'views/templates.xml',
     ],

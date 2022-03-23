@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="act_biko_oa_sessions_list">
+            <field name="name">Sessions</field>
+            <field name="res_model">biko.oa.sessions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Sessions in your session's list
+                </p>
+                <p>
+                    Odoo helps you track all activities related to your sessions.
+                </p>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_sessions_tree" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.tree</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Name"/>
+                    <field name="startDate" string="Start date"/>
+                    <field name="duration" string="Duration"/>
+                    <field name="seats" string="Seats"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_sessions_form" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.form</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <form string="Session">
+                    <sheet>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <separator/>
+                        <group>
+                            <group>
+                                <field name="startDate" string="Start date"/>
+                                <field name="duration" string="Duration" options='{"type": "number", "step": 1}'/>
+                            </group>
+                            <group>
+                                <field name="seats" string="Seats" options='{"type": "number", "step": 1}'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Cources">
+                                <field name="course" readonly="1"/>
+                            </page>
+                            <page string="Attendees">
+                                <field name="attendee_id"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        <record id="search_biko_oa_courses" model="ir.ui.view">-->
+<!--            <field name="name">biko.oa.course.search</field>-->
+<!--            <field name="model">biko.oa.course</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="Search Courses">-->
+<!--                    <field name="title"/>-->
+<!--                    <field name="description"/>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

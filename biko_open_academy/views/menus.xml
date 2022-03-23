@@ -2,19 +2,24 @@
 
     <menuitem
         id="biko_oa_root"
-        name="BIKO: Open Academy"/>
+        name="BIKO: Open Academy"
+        sequence="0"/>
 
-<!--    <menuitem
-        id="biko_oa_courses_mm"
-        name="Courses"
-        parent="biko_oa_root"
-        sequence="1"/>
--->
     <menuitem
-        id="biko_ao_courses"
+        id="biko_oa_courses_mm"
+        name="Academy Cources"
+        parent="biko_oa_root"/>
+
+    <menuitem
+        id="biko_oa_courses"
         name="Courses"
-        parent="biko_oa_root"
-        action="act_biko_oa_courses_list"
-        sequence="2"/>
+        parent="biko_oa_courses_mm"
+        action="act_biko_oa_courses_list"/>
+
+    <menuitem
+        id="biko_oa_sessions"
+        name="Sessions"
+        parent="biko_oa_courses_mm"
+        action="act_biko_oa_sessions_list"/>
 
 </odoo>
