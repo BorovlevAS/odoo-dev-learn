@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="view_biko_res_partner_form" model="ir.ui.view">
+            <field name="name">biko.res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="sessions" string="Sessions">
+                        <field name = "session_ids" string = "Sessions"/>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name = "instructor" string = "Instructor"/>
+                    <field name="teacher" string="Teacher"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
