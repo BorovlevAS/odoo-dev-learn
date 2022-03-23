@@ -11,5 +11,14 @@ class biko_oa_course(models.Model):
     name = fields.Char(required=True, string="Title")
     description = fields.Char()
     respUser = fields.Many2one('res.users')
-    instructor = fields.Many2one('res.partner')
     session_id = fields.Many2one('biko.oa.sessions', required=True)
+
+    _sql_constraints = [
+        ('name_mustbe_uniq',
+         "UNIQUE(name)",
+         "You already have course with such name!")]
+
+    def copy(self, default=None):
+        new_name = 'Copy of ' + self.name
+        default = dict(default or {}, name=new_name)
+        return super(biko_oa_course, self).copy(default)

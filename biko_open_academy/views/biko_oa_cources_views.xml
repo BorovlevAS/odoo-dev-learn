@@ -23,7 +23,6 @@
                     <field name="name" string="Title"/>
                     <field name="description" string="Description"/>
                     <field name="respUser" string="Responsible user"/>
-                    <field name="instructor" string="Instructor"/>
                     <field name="session_id" string="Session"/>
                 </tree>
             </field>
@@ -49,7 +48,7 @@
                                         </li>
                                         <li><field name="description"/></li>
                                         <li><strong>Responsible user:</strong> <field name="respUser"/></li>
-                                        <li><strong>Instructor:</strong> <field name="instructor"/></li>
+                                        <li><strong>Session:</strong> <field name="session_id"/></li>
                                     </ul>
                                 </div>
                             </div>
@@ -71,14 +70,9 @@
                             <field class="o_text_overflow" name="name" default_focus="1" placeholder="e.g. Full Stack Web Development Bootcamp" attrs="{'required' : True}"/>
                         </h1>
                         <separator string="Details"/>
-                        <group colspan="2">
-                            <group col="1">
-                                <field name="respUser" string="Responsible user"/>
-                                <field name="instructor" string="Instructor"/>
-                            </group>
-                            <group col="1">
-                                <field name="session_id" string="Session"/>
-                            </group>
+                        <group>
+                            <field name="respUser" string="Responsible user"/>
+                            <field name="session_id" string="Session"/>
                         </group>
                         <notebook>
                             <page string="Description">
