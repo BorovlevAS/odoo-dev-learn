@@ -11,7 +11,7 @@ class biko_oa_course(models.Model):
     name = fields.Char(required=True, string="Title")
     description = fields.Char()
     respUser = fields.Many2one('res.users')
-    session_id = fields.Many2one('biko.oa.sessions', required=True)
+    session_id = fields.One2many('biko.oa.sessions', 'course')
 
     _sql_constraints = [
         ('name_mustbe_uniq',

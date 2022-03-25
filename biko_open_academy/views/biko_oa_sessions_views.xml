@@ -4,7 +4,7 @@
         <record model="ir.actions.act_window" id="act_biko_oa_sessions_list">
             <field name="name">Sessions</field>
             <field name="res_model">biko.oa.sessions</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,kanban,calendar,graph,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a Sessions in your session's list
@@ -23,10 +23,62 @@
                     <field name="name" string="Name"/>
                     <field name="start_date" string="Start date"/>
                     <field name="duration" string="Duration"/>
+                    <field name="end_date" string="End date"/>
                     <field name="seats" string="Seats"/>
-                    <field name="percents" string="% taken" widget="progressbar"/>
+                    <field name="taken_seats" string="Taken seats" widget="progressbar"/>
                     <field name="instructor" string="Instructor"/>
                 </tree>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_sessions_kanban" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.kanban</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="course" group_delete="0" group_create="0" group_edit="0">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="seats"/>
+                    <field name="attendees_count"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <ul>
+                                        <li>
+                                            <h3><field name="name"/></h3>
+                                        </li>
+                                        <li><field name="start_date"/> - <field name="end_date"/></li>
+                                        <li><strong>Seats:</strong> <field name="seats"/></li>
+                                        <li><strong>Attendees:</strong> <field name="attendees_count"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_sessions_calendar" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.calendar</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <calendar date_start="start_date" date_stop = "end_date" quick_add="1" mode="month">
+                    <field name = "name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_biko_oa_sessions_graph" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.graph</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <graph string="Participants of course">
+                    <field name = "course"/>
+                    <field name = "attendees_count" type="measure"/>
+                </graph>
             </field>
         </record>
 
@@ -44,17 +96,16 @@
                             <group>
                                 <field name="start_date" string="Start date"/>
                                 <field name="duration" string="Duration" options='{"type": "number", "step": 1}'/>
+                                <field name="end_date" string="End date"/>
                             </group>
                             <group>
                                 <field name="instructor" string="Instructor"/>
                                 <field name="seats" string="Seats" options='{"type": "number", "step": 1}'/>
-                                <field name="percents" widget="progressbar"/>
+                                <field name="taken_seats" widget="progressbar"/>
+                                <field name="course" string="Course"/>
                             </group>
                         </group>
                         <notebook>
-                            <page string="Cources">
-                                <field name="course" readonly="1"/>
-                            </page>
                             <page string="Attendees">
                                 <field name="attendee_id"/>
                             </page>
@@ -64,16 +115,16 @@
             </field>
         </record>
 
-<!--        <record id="search_biko_oa_courses" model="ir.ui.view">-->
-<!--            <field name="name">biko.oa.course.search</field>-->
-<!--            <field name="model">biko.oa.course</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <search string="Search Courses">-->
-<!--                    <field name="title"/>-->
-<!--                    <field name="description"/>-->
-<!--                </search>-->
-<!--            </field>-->
-<!--        </record>-->
+        <record id="search_biko_oa_sessions_search" model="ir.ui.view">
+            <field name="name">biko.oa.sessions.search</field>
+            <field name="model">biko.oa.sessions</field>
+            <field name="arch" type="xml">
+                <search string="Sessions">
+                    <field name="name"/>
+                    <field name="course"/>
+                </search>
+            </field>
+        </record>
 
     </data>
 </odoo>

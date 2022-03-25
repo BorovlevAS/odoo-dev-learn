@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from datetime import datetime
+from datetime import datetime, timedelta
 from odoo.exceptions import ValidationError
 
 
@@ -9,42 +9,50 @@ class biko_oa_sessions(models.Model):
 
     active = fields.Boolean(default=True)
     name = fields.Char(required=True)
+
     start_date = fields.Date(default=datetime.today(), required=True)
     duration = fields.Integer(required=True)
+    end_date = fields.Date(compute='_compute_end_date', store=True)
+
     seats = fields.Integer(required=True)
-    percents = fields.Float('% of taken seats', compute='_compute_percents', digits=(5, 3))
-    course = fields.One2many('biko.oa.course', 'session_id')
+    taken_seats = fields.Float(compute='_compute_taken_seats')
+
+    course = fields.Many2one('biko.oa.course', required=True)
     instructor = fields.Many2one('res.partner',
                                  domain="['|', ('teacher', '=', 'teacher_level1'), "
                                         "'|', ('teacher', '=', 'teacher_level2'), "
                                         "('instructor', '=', 'True')]")
-    attendee_id = fields.Many2many('res.partner', column1 = 'attendee_id', column2 = 'partner_id', string='Attendees list')
+    attendee_id = fields.Many2many('res.partner', column1 ='attendee_id', column2 ='partner_id', string='Attendees list')
+    attendees_count = fields.Integer(compute='_compute_attendees', store=True)
 
-    def _compute_percent_record(record):
-        if (record.seats == 0):
-            record.percents = 0
-        else:
-            record.percents = len(record.attendee_id) * 100 / record.seats
+    @api.depends('start_date', 'duration')
+    def _compute_end_date(self):
+        for rec in self:
+            rec.end_date = rec.start_date + timedelta(days=rec.duration)
 
     @api.depends('attendee_id', 'seats')
-    def _compute_percents(self):
-        if len(self) == 1:
-            biko_oa_sessions._compute_percent_record(self)
-        else:
-            for record in self:
-                biko_oa_sessions._compute_percent_record(record)
-
+    def _compute_taken_seats(self):
+        for record in self:
+            if not record.seats:
+                record.taken_seats = 0
+            else:
+                record.taken_seats = 100 * len(record.attendee_id) / record.seats
 
     @api.onchange('seats')
     def _onchange_seats(self):
-        if self.seats < 0:
-            raise ValidationError("You can't set negative number of seats")
+        for r in self:
+            if r.seats < 0:
+                raise ValidationError("You can't set negative number of seats")
 
-    @api.onchange('attendee_id')
-    def _onchange_attendees(self):
-        if self.seats < len(self.attendee_id):
-            raise ValidationError('There are only %s seats can be taken!' % self.seats)
+    @api.depends('attendee_id')
+    def _compute_attendees(self):
+        for r in self:
+            r.attendees_count = len(r.attendee_id)
 
-        for rec in self.attendee_id:
-            if rec.instructor:
-                raise ValidationError("Instructor %s can't be attendee!" % rec.name)
+    @api.constrains('instructor', 'attendee_id')
+    def _check_instructor_not_attendee(self):
+        for r in self:
+            if r.seats < len(r.attendee_id):
+                raise ValidationError('There are only %s seats can be taken!' % r.seats)
+            if r.instructor and r.instructor in r.attendee_id:
+                raise ValidationError("Instructor or teqcher %s can't be attendee!" % r.instructor.name)
