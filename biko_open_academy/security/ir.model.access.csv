@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-biko_oa_course_access_user,biko_oa_course_access_user,model_biko_oa_course,base.group_user,1,1,1,1
-biko_oa_sessions_access_user,biko_oa_sessions_access_user,model_biko_oa_sessions,base.group_user,1,1,1,1
+biko_oa_course_access_user,biko_oa_course_access_user,model_biko_oa_course,,1,0,0,0
+biko_oa_sessions_access_user,biko_oa_sessions_access_user,model_biko_oa_sessions,,1,0,0,0
+biko_oa_course_access_manager,biko_oa_course_access_manager,model_biko_oa_course,group_biko_oa_manager,1,1,1,1
+biko_oa_sessions_access_manager,biko_oa_sessions_access_manager,model_biko_oa_sessions,group_biko_oa_manager,1,1,1,1
+biko_oa_sessions_wizard,biko_oa_sessions_wizard,model_biko_oa_wizard,group_biko_oa_manager,1,1,1,1

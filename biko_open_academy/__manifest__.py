@@ -24,10 +24,12 @@
 
     # always loaded
     'data': [
+        'security/biko_oa_security.xml',
         'security/ir.model.access.csv',
         'views/biko_oa_cources_views.xml',
         'views/biko_oa_sessions_views.xml',
         'views/res_partner_views.xml',
+        'views/biko_oa_wizard_views.xml',
         'views/menus.xml',
         'views/templates.xml',
     ],
