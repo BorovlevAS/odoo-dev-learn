@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="biko_oa_wizard_action" model="ir.actions.act_window">
+            <field name="name">Add attendees to sessions</field>
+            <field name="res_model">biko.oa.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_biko_oa_sessions"/>
+        </record>
+
+        <record model="ir.ui.view" id="view_biko_oa_wizard">
+            <field name="name">biko.oa.wizard.wizard</field>
+            <field name="model">biko.oa.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="session_ids" string="Sessions"/>
+                        <field name="attendee_ids" string="Attendees"/>
+                    </sheet>
+                    <footer>
+                        <button type="object" name="add_atteendees_to_sessions" class="btn btn-primary"
+                                string="Add attendees" data-hotkey="q"/>
+                        <button string="Cancel" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
