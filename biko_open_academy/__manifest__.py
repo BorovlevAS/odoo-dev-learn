@@ -29,9 +29,10 @@
         'views/biko_oa_cources_views.xml',
         'views/biko_oa_sessions_views.xml',
         'views/res_partner_views.xml',
-        'views/biko_oa_wizard_views.xml',
+        'wizards/biko_oa_wizard_views.xml',
         'views/menus.xml',
         'views/templates.xml',
+        'reports/biko_oa_reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

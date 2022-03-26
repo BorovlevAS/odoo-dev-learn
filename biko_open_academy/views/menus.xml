@@ -7,7 +7,7 @@
 
     <menuitem
         id="biko_oa_courses_mm"
-        name="Academy Cources"
+        name="Lists"
         parent="biko_oa_root"/>
 
     <menuitem
