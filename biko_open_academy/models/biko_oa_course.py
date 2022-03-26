@@ -5,12 +5,12 @@ from odoo import models, fields
 
 class biko_oa_course(models.Model):
     _name = 'biko.oa.course'
-    _description = 'BIKO: Open Academy. Courses'
+    _description = 'BIKO: Open Academy. Course'
 
     active = fields.Boolean(default=True)
     name = fields.Char(required=True, string="Title")
     description = fields.Char()
-    respUser = fields.Many2one('res.users')
+    resp_user_id = fields.Many2one('res.users')
     session_id = fields.One2many('biko.oa.sessions', 'course')
 
     _sql_constraints = [

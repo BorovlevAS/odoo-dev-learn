@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-25 23:04+0000\n"
-"PO-Revision-Date: 2022-03-26 01:19+0200\n"
+"POT-Creation-Date: 2022-03-25 23:44+0000\n"
+"PO-Revision-Date: 2022-03-26 01:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -26,11 +26,6 @@ msgstr "<strong>Студенты:</strong>"
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_kanban
 msgid "<strong>Seats:</strong>"
 msgstr "<strong>Мест:</strong>"
-
-#. module: biko_open_academy
-#: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses_mm
-msgid "Academy Cources"
-msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_course__active
@@ -87,8 +82,8 @@ msgstr "BIKO: Академия. Помощник"
 
 #. module: biko_open_academy
 #: model:ir.model,name:biko_open_academy.model_biko_oa_course
-msgid "BIKO: Open Academy. Courses"
-msgstr "BIKO: Академия. Курсы"
+msgid "BIKO: Open Academy. Course"
+msgstr "BIKO: Академия. Курс"
 
 #. module: biko_open_academy
 #: model:ir.model,name:biko_open_academy.model_biko_oa_sessions
@@ -104,11 +99,6 @@ msgstr "Отмена"
 #: model:ir.model,name:biko_open_academy.model_res_partner
 msgid "Contact"
 msgstr "Контакт"
-
-#. module: biko_open_academy
-#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_courses_list
-msgid "Cources"
-msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_sessions__course
@@ -232,13 +222,18 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: biko_open_academy
+#: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses_mm
+msgid "Lists"
+msgstr "Курсы и сессии"
+
+#. module: biko_open_academy
 #: model:res.groups,name:biko_open_academy.group_biko_oa_manager
 msgid "Manager"
 msgstr "Менеджер"
 
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_courses
-msgid "My Cources"
+msgid "My courses"
 msgstr "Мои курсы"
 
 #. module: biko_open_academy
@@ -268,15 +263,15 @@ msgid "Participants of course"
 msgstr "Студенты курса"
 
 #. module: biko_open_academy
+#: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_course__resp_user_id
+msgid "Resp User"
+msgstr ""
+
+#. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_courses
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_courses_form
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_courses_tree
 msgid "Responsible user"
-msgstr "Ответственный"
-
-#. module: biko_open_academy
-#: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_course__respUser
-msgid "Respuser"
 msgstr "Ответственный"
 
 #. module: biko_open_academy
@@ -355,14 +350,14 @@ msgid "Title"
 msgstr "Название"
 
 #. module: biko_open_academy
-#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_tree
-msgid "Wizard"
-msgstr "Помощник"
-
-#. module: biko_open_academy
 #: model:ir.model.constraint,message:biko_open_academy.constraint_biko_oa_course_name_mustbe_uniq
 msgid "You already have course with such name!"
 msgstr "У вас уже есть курс с таким названием"
+
+#. module: biko_open_academy
+#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_courses_list
+msgid "courses"
+msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_courses_form

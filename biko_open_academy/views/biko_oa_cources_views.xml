@@ -2,7 +2,7 @@
     <data>
 
         <record model="ir.actions.act_window" id="act_biko_oa_courses_list">
-            <field name="name">Cources</field>
+            <field name="name">courses</field>
             <field name="res_model">biko.oa.course</field>
             <field name="view_mode">tree,form</field>
             <field name="context">{
@@ -27,7 +27,7 @@
                 <tree>
                     <field name="name" string="Title"/>
                     <field name="description" string="Description"/>
-                    <field name="respUser" string="Responsible user"/>
+                    <field name="resp_user_id" string="Responsible user"/>
                 </tree>
             </field>
         </record>
@@ -45,7 +45,7 @@
                         </h1>
                         <separator string="Details"/>
                         <group>
-                            <field name="respUser" string="Responsible user"/>
+                            <field name="resp_user_id" string="Responsible user"/>
                         </group>
                         <notebook>
                             <page string="Description">
@@ -69,12 +69,12 @@
                     <field name="description" string="Name and description"
                         filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
 
-                    <filter name="responsle_filter" string="My Cources"
-                        domain="[('respUser', '=', uid)]"/>
+                    <filter name="responsle_filter" string="My courses"
+                        domain="[('resp_user_id', '=', uid)]"/>
 
                     <group string="Group By">
                         <filter name="group_by_user" string="Responsible user"
-                                context="{'group_by': 'respUser'}"/>
+                                context="{'group_by': 'resp_user_id'}"/>
                     </group>
                 </search>
             </field>
