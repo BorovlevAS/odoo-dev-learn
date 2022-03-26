@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-25 23:44+0000\n"
-"PO-Revision-Date: 2022-03-26 01:49+0200\n"
+"POT-Creation-Date: 2022-03-26 16:54+0000\n"
+"PO-Revision-Date: 2022-03-26 18:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -21,6 +21,16 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_kanban
 msgid "<strong>Attendees:</strong>"
 msgstr "<strong>Студенты:</strong>"
+
+#. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.sessions_report
+msgid "<strong>Attendees</strong>"
+msgstr "<strong>Студенты</strong>"
+
+#. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.sessions_report
+msgid "<strong>Period: </strong>"
+msgstr "<strong>Период: </strong>"
 
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_kanban
@@ -83,7 +93,7 @@ msgstr "BIKO: Академия. Помощник"
 #. module: biko_open_academy
 #: model:ir.model,name:biko_open_academy.model_biko_oa_course
 msgid "BIKO: Open Academy. Course"
-msgstr "BIKO: Академия. Курс"
+msgstr ""
 
 #. module: biko_open_academy
 #: model:ir.model,name:biko_open_academy.model_biko_oa_sessions
@@ -224,7 +234,7 @@ msgstr ""
 #. module: biko_open_academy
 #: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses_mm
 msgid "Lists"
-msgstr "Курсы и сессии"
+msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model:res.groups,name:biko_open_academy.group_biko_oa_manager
@@ -296,6 +306,11 @@ msgid "Session"
 msgstr "Сессия"
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.sessions_report
+msgid "Session:"
+msgstr ""
+
+#. module: biko_open_academy
 #: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_sessions_list
 #: model:ir.ui.menu,name:biko_open_academy.biko_oa_sessions
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_sessions_search
@@ -304,6 +319,11 @@ msgstr "Сессия"
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_res_partner_form
 msgid "Sessions"
 msgstr "Сессии"
+
+#. module: biko_open_academy
+#: model:ir.actions.report,name:biko_open_academy.action_sessions_report
+msgid "Sessions and attendees"
+msgstr "Печатать данные о сессии"
 
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_sessions__start_date
