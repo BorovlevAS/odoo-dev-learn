@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-27 11:17+0000\n"
-"PO-Revision-Date: 2022-03-27 14:18+0300\n"
+"POT-Creation-Date: 2022-03-27 14:02+0000\n"
+"PO-Revision-Date: 2022-03-27 17:04+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -69,6 +69,7 @@ msgid "Attendee"
 msgstr "Студент"
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_calendar
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_form
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_wizard
 msgid "Attendees"
@@ -106,6 +107,11 @@ msgid "BIKO: Open Academy. Sessions"
 msgstr "BIKO: Академия. Сессии"
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_dashboard
+msgid "Calendar"
+msgstr "Календарь"
+
+#. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_wizard
 msgid "Cancel"
 msgstr "Отмена"
@@ -130,6 +136,7 @@ msgstr "Курсы"
 #. module: biko_open_academy
 #: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_courses_list
 #: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_sessions_search
 msgid "Courses"
 msgstr "Курсы"
 
@@ -156,6 +163,11 @@ msgstr "Создано"
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_wizard__create_date
 msgid "Created on"
 msgstr "Создано с помощью"
+
+#. module: biko_open_academy
+#: model:ir.ui.menu,name:biko_open_academy.biko_oa_dashboard
+msgid "Dashboard"
+msgstr "Рабочий стол"
 
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_course__description
@@ -215,6 +227,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_sessions__instructor
 #: model:ir.model.fields,field_description:biko_open_academy.field_res_partner__instructor
 #: model:ir.model.fields,field_description:biko_open_academy.field_res_users__instructor
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_sessions_search
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_form
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_tree
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_res_partner_form
@@ -243,6 +256,11 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_dashboard
+msgid "List of courses"
+msgstr "Список курсов"
+
+#. module: biko_open_academy
 #: model:res.groups,name:biko_open_academy.group_biko_oa_manager
 msgid "Manager"
 msgstr "Менеджер"
@@ -264,6 +282,11 @@ msgid "Name and description"
 msgstr "Название и описание"
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_dashboard
+msgid "Number of attendees"
+msgstr "Количество студентов"
+
+#. module: biko_open_academy
 #: model_terms:ir.actions.act_window,help:biko_open_academy.act_biko_oa_courses_list
 msgid "Odoo helps you track all activities related to your courses."
 msgstr "ODOO поможет вам работать с курсами"
@@ -272,6 +295,12 @@ msgstr "ODOO поможет вам работать с курсами"
 #: model_terms:ir.actions.act_window,help:biko_open_academy.act_biko_oa_sessions_list
 msgid "Odoo helps you track all activities related to your sessions."
 msgstr "ODOO поможет вам работать с сессиями"
+
+#. module: biko_open_academy
+#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_dashboard
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_dashboard
+msgid "Open Academy Dashboard"
+msgstr "Открыть рабочий стол"
 
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_graph
@@ -314,9 +343,11 @@ msgstr "Сессия"
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.sessions_report
 msgid "Session:"
-msgstr ""
+msgstr "Сессия:"
 
 #. module: biko_open_academy
+#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_sessions_calendar
+#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_sessions_graph
 #: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_sessions_list
 #: model:ir.ui.menu,name:biko_open_academy.biko_oa_sessions
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_sessions_search
@@ -355,6 +386,7 @@ msgstr "Занято мест"
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_res_partner__teacher
 #: model:ir.model.fields,field_description:biko_open_academy.field_res_users__teacher
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_calendar
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_res_partner_form
 msgid "Teacher"
 msgstr "Преподаватель"
