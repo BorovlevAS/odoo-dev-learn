@@ -20,7 +20,7 @@
     'version': '1.0.6',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'board'],
 
     # always loaded
     'data': [
@@ -31,6 +31,7 @@
         'views/res_partner_views.xml',
         'wizards/wizard_views.xml',
         'views/menus.xml',
+        'views/dashboard.xml',
         'reports/reports.xml',
     ],
     # only loaded in demonstration mode
