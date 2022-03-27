@@ -16,7 +16,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'DEMO',
     'version': '1.0.6',
 
     # any module necessary for this one to work correctly
@@ -24,15 +24,14 @@
 
     # always loaded
     'data': [
-        'security/biko_oa_security.xml',
+        'security/security.xml',
         'security/ir.model.access.csv',
-        'views/biko_oa_cources_views.xml',
-        'views/biko_oa_sessions_views.xml',
+        'views/courses_views.xml',
+        'views/sessions_views.xml',
         'views/res_partner_views.xml',
-        'wizards/biko_oa_wizard_views.xml',
+        'wizards/wizard_views.xml',
         'views/menus.xml',
-        'views/templates.xml',
-        'reports/biko_oa_reports.xml',
+        'reports/reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
