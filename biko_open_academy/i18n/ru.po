@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-26 16:54+0000\n"
-"PO-Revision-Date: 2022-03-26 18:55+0200\n"
+"POT-Creation-Date: 2022-03-27 11:17+0000\n"
+"PO-Revision-Date: 2022-03-27 14:18+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -36,6 +36,11 @@ msgstr "<strong>Период: </strong>"
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_sessions_kanban
 msgid "<strong>Seats:</strong>"
 msgstr "<strong>Мест:</strong>"
+
+#. module: biko_open_academy
+#: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses_mm
+msgid "Academy Data"
+msgstr "Управление курсами и сессиями"
 
 #. module: biko_open_academy
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_course__active
@@ -106,6 +111,11 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #. module: biko_open_academy
+#: model_terms:ir.ui.view,arch_db:biko_open_academy.search_biko_oa_courses
+msgid "Closed courses"
+msgstr "Закрытые курсы"
+
+#. module: biko_open_academy
 #: model:ir.model,name:biko_open_academy.model_res_partner
 msgid "Contact"
 msgstr "Контакт"
@@ -118,6 +128,7 @@ msgid "Course"
 msgstr "Курсы"
 
 #. module: biko_open_academy
+#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_courses_list
 #: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses
 msgid "Courses"
 msgstr "Курсы"
@@ -230,11 +241,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:biko_open_academy.field_biko_oa_wizard__write_date
 msgid "Last Updated on"
 msgstr ""
-
-#. module: biko_open_academy
-#: model:ir.ui.menu,name:biko_open_academy.biko_oa_courses_mm
-msgid "Lists"
-msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model:res.groups,name:biko_open_academy.group_biko_oa_manager
@@ -373,11 +379,6 @@ msgstr "Название"
 #: model:ir.model.constraint,message:biko_open_academy.constraint_biko_oa_course_name_mustbe_uniq
 msgid "You already have course with such name!"
 msgstr "У вас уже есть курс с таким названием"
-
-#. module: biko_open_academy
-#: model:ir.actions.act_window,name:biko_open_academy.act_biko_oa_courses_list
-msgid "courses"
-msgstr "Курсы"
 
 #. module: biko_open_academy
 #: model_terms:ir.ui.view,arch_db:biko_open_academy.view_biko_oa_courses_form
