@@ -22,12 +22,8 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Open Academy Dashboard">
-                <board style="2-1">
-                    <column>
-                        <action
-                            string="Calendar"
-                            name="%(act_biko_oa_sessions_calendar)d"/>
-                    </column>
+                <board style="1-1">
+
                     <column>
                         <action
                             string="Number of attendees"
@@ -36,6 +32,13 @@
                             string="List of courses"
                             name="%(act_biko_oa_courses_list)d"/>
                     </column>
+
+                    <column>
+                        <action
+                            string="Calendar"
+                            name="%(act_biko_oa_sessions_calendar)d"/>
+                    </column>
+
                 </board>
             </form>
         </field>
