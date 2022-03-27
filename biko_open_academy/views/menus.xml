@@ -22,10 +22,4 @@
         parent="biko_oa_courses_mm"
         action="act_biko_oa_sessions_list"/>
 
-    <menuitem
-        id="biko_oa_dashboard"
-        name="Dashboard"
-        parent="biko_oa_root"
-        action="act_biko_oa_dashboard"/>
-
 </odoo>
