@@ -31,4 +31,14 @@
         </t>
     </template>
 
+    <template id="product_item_hide_no_price" inherit_id="website_sale.product_price">
+         <xpath expr="//span[hasclass('oe_price')]" position="attributes">
+             <attribute name="t-if">combination_info['price']</attribute>
+         </xpath>
+     </template>
+
+    <record id="website_sale.products_categories" model="ir.ui.view">
+        <field name="active" eval="True"/>
+    </record>
+
 </odoo>

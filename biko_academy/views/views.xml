@@ -52,13 +52,13 @@
 <!--        Courses' views -->
         <record model="ir.actions.act_window" id="act_biko_academy_courses_list">
             <field name="name">Courses</field>
-            <field name="res_model">biko_academy.courses</field>
+            <field name="res_model">product.template</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <record model="ir.ui.view" id="view_biko_academy_courses_list">
             <field name="name">biko.academy.courses.tree</field>
-            <field name="model">biko_academy.courses</field>
+            <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" string="Title"/>
@@ -69,7 +69,7 @@
 
         <record model="ir.ui.view" id="view_biko_academy_courses_form">
             <field name="name">biko.academy.courses.form</field>
-            <field name="model">biko_academy.courses</field>
+            <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <form string="Course">
                     <sheet>
