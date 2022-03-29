@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+biko_academy_teachers_access_user,biko_academy_teachers_access_user,model_biko_academy_teachers,,1,0,0,0
+biko_academy_courses_access_user,biko_academy_courses_access_user,model_biko_academy_courses,,1,0,0,0
+biko_academy_teachers_access_admin,biko_academy_teachers_access_admin,model_biko_academy_teachers,group_biko_academy_admin,1,1,1,1
+biko_academy_courses_access_admin,biko_academy_courses_access_admin,model_biko_academy_courses,group_biko_academy_admin,1,1,1,1
