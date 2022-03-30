@@ -8,4 +8,10 @@
     'depends': ['website'],
     'data': [
     ],
+
+    'assets': {
+        'web._assets_primary_variables': [
+            'theme_biko_web/static/scss/style.scss',
+        ],
+    }
 }
