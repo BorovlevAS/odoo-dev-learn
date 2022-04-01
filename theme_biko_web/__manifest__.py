@@ -7,11 +7,16 @@
 
     'depends': ['website'],
     'data': [
+        'views/layout.xml',
+        'views/pages.xml'
     ],
 
     'assets': {
         'web._assets_primary_variables': [
-            'theme_biko_web/static/scss/style.scss',
+            'theme_biko_web/static/scss/primary_variables.scss',
+        ],
+        'web._assets_frontend_helpers': [
+            'theme_biko_web/static/scss/bootstrap_overriden.scss',
         ],
     }
 }
