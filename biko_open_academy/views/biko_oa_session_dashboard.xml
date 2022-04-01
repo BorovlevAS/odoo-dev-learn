@@ -12,7 +12,7 @@
                     <column>
                         <action
                             string="Number of attendees"
-                            name="%(biko_oa_sessions_action_graph)d"/>
+                            name="%(biko_oa_session_action_graph)d"/>
 
                         <action
                             string="List of courses"
@@ -20,7 +20,7 @@
 
                         <action
                             string="Calendar"
-                            name="%(biko_oa_sessions_action_calendar)d"/>
+                            name="%(biko_oa_session_action_calendar)d"/>
                     </column>
 
                </board>

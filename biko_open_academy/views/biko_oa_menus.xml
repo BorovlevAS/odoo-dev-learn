@@ -24,9 +24,9 @@
         action="biko_oa_courses_action_tree"/>
 
     <menuitem
-        id="biko_oa_sessions_open_sessions_list"
+        id="biko_oa_session_open_sessions_list"
         name="Sessions"
         parent="biko_oa_courses_mm"
-        action="biko_oa_sessions_action_tree"/>
+        action="biko_oa_session_action_tree"/>
 
 </odoo>

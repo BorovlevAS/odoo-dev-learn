@@ -3,7 +3,7 @@ from odoo import api, models, fields
 from odoo.exceptions import ValidationError
 
 class Sessions(models.Model):
-    _name = 'biko.oa.sessions'
+    _name = 'biko.oa.session'
     _description = 'BIKO: Open Academy. Sessions'
 
     active = fields.Boolean(default=True)

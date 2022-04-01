@@ -1,9 +1,9 @@
 <odoo>
     <data>
 
-        <record id="biko_oa_sessions_action_tree" model="ir.actions.act_window">
+        <record id="biko_oa_session_action_tree" model="ir.actions.act_window">
             <field name="name">Sessions</field>
-            <field name="res_model">biko.oa.sessions</field>
+            <field name="res_model">biko.oa.session</field>
             <field name="view_mode">tree,kanban,calendar,graph,form</field>
             <field name="context">{}</field>
             <field name="help" type="html">
@@ -16,9 +16,9 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_view_tree" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.tree</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="biko_oa_session_view_tree" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.tree</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <tree decoration-primary="duration 	&lt; 5" decoration-danger="duration &gt; 15">
                     <field name="name" string="Name"/>
@@ -32,9 +32,9 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_view_kanban" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.kanban</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="biko_oa_session_view_kanban" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.kanban</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="course" group_delete="0" group_create="0" group_edit="0">
                     <field name="name"/>
@@ -62,9 +62,9 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_view_calendar" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.calendar</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="biko_oa_session_view_calendar" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.calendar</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <calendar date_start="start_date" date_stop = "end_date" quick_add="1" mode="month" color="course">
                     <field name = "name"/>
@@ -75,9 +75,9 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_view_graph" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.graph</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="biko_oa_session_view_graph" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.graph</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <graph string="Participants of course">
                     <field name = "course"/>
@@ -86,9 +86,9 @@
             </field>
         </record>
 
-        <record id="view_biko_oa_sessions_view_form" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.form</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="view_biko_oa_session_view_form" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.form</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <form string="Session">
                     <sheet>
@@ -119,9 +119,9 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_view_search" model="ir.ui.view">
-            <field name="name">biko.oa.sessions.view.search</field>
-            <field name="model">biko.oa.sessions</field>
+        <record id="biko_oa_session_view_search" model="ir.ui.view">
+            <field name="name">biko.oa.session.view.search</field>
+            <field name="model">biko.oa.session</field>
             <field name="arch" type="xml">
                 <search string="Sessions">
                     <field name="name"/>
@@ -134,18 +134,18 @@
             </field>
         </record>
 
-        <record id="biko_oa_sessions_action_calendar" model="ir.actions.act_window">
+        <record id="biko_oa_session_action_calendar" model="ir.actions.act_window">
             <field name="name">Sessions</field>
-            <field name="res_model">biko.oa.sessions</field>
+            <field name="res_model">biko.oa.session</field>
             <field name="view_mode">calendar</field>
-            <field name="view_id" ref="biko_oa_sessions_view_calendar"/>
+            <field name="view_id" ref="biko_oa_session_view_calendar"/>
         </record>
 
-        <record id="biko_oa_sessions_action_graph" model="ir.actions.act_window" >
+        <record id="biko_oa_session_action_graph" model="ir.actions.act_window" >
             <field name="name">Sessions</field>
-            <field name="res_model">biko.oa.sessions</field>
+            <field name="res_model">biko.oa.session</field>
             <field name="view_mode">graph</field>
-            <field name="view_id" ref="biko_oa_sessions_view_graph"/>
+            <field name="view_id" ref="biko_oa_session_view_graph"/>
         </record>
 
     </data>

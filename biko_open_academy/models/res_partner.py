@@ -6,4 +6,4 @@ class Partner(models.Model):
 
     instructor = fields.Boolean()
     teacher = fields.Selection([('teacher_level1', "Teacher / Level 1"), ('teacher_level2', "Teacher / Level 2")])
-    session_ids = fields.Many2many('biko.oa.sessions', column1='partner_id', column2='attendee_id')
+    session_ids = fields.Many2many('biko.oa.session', column1='partner_id', column2='attendee_id')

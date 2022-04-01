@@ -28,10 +28,10 @@
         'security/biko_oa_course_security.xml',
         'security/ir.model.access.csv',
         'views/biko_oa_course_views.xml',
-        'views/biko_oa_sessions_views.xml',
+        'views/biko_oa_session_views.xml',
         'views/res_partner_views.xml',
         'wizards/biko_oa_wizard_views.xml',
-        'views/biko_oa_sessions_dashboard.xml',
+        'views/biko_oa_session_dashboard.xml',
         'views/biko_oa_menus.xml',
         'reports/biko_oa_templates.xml',
         'reports/biko_oa_reports.xml',
@@ -39,7 +39,7 @@
     # only loaded in demonstration mode
     'demo': [
         'demo/biko_oa_course_demo.xml',
-        'demo/biko_oa_sessions_demo.xml',
+        'demo/biko_oa_session_demo.xml',
     ],
 
     'installable': True,

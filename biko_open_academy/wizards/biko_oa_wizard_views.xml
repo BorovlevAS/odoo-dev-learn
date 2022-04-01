@@ -7,11 +7,11 @@
             <field name="res_model">biko.oa.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <field name="binding_model_id" ref="model_biko_oa_sessions"/>
+            <field name="binding_model_id" ref="model_biko_oa_session"/>
         </record>
 
-        <record model="ir.ui.view" id="view_biko_oa_wizard">
-            <field name="name">biko.oa.wizard.wizard</field>
+        <record id="biko_oa_wizard_view" model="ir.ui.view">
+            <field name="name">biko.oa.wizard.view</field>
             <field name="model">biko.oa.wizard</field>
             <field name="arch" type="xml">
                 <form>
