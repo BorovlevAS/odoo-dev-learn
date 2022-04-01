@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="action_sessions_report" model="ir.actions.report">
+        <field name="name">Sessions and attendees</field>
+        <field name="model">biko.oa.sessions</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">biko_open_academy.sessions_report</field>
+        <field name="report_file">biko_open_academy.sessions_report</field>
+        <field name="binding_model_id" ref="model_biko_oa_sessions"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

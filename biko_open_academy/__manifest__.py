@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "BIKO: open academy 15.1.0.6",
+    'name': "BIKO: open academy 15.1.0.7",
 
     'summary': """
         BIKO: open academy
@@ -17,26 +17,29 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'DEMO',
-    'version': '1.0.6',
+    'version': '1.0.7',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'board'],
 
     # always loaded
     'data': [
-        'security/security.xml',
+        'security/biko_oa_groups.xml',
+        'security/biko_oa_course_security.xml',
         'security/ir.model.access.csv',
-        'views/courses_views.xml',
-        'views/sessions_views.xml',
+        'views/biko_oa_course_views.xml',
+        'views/biko_oa_sessions_views.xml',
         'views/res_partner_views.xml',
-        'wizards/wizard_views.xml',
-        'views/menus.xml',
+        'wizards/biko_oa_wizard_views.xml',
+        'views/biko_oa_menus.xml',
         'views/dashboard.xml',
-        'reports/reports.xml',
+        'reports/biko_oa_templates.xml',
+        'reports/biko_oa_reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/biko_oa_course_demo.xml',
+        'demo/biko_oa_sessions_demo.xml',
     ],
 
     'installable': True,
