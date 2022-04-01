@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-
-from odoo import models, fields, api
 from datetime import datetime, timedelta
+from odoo import api, models, fields
 from odoo.exceptions import ValidationError
 
 class Sessions(models.Model):

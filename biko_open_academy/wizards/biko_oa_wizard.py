@@ -1,6 +1,6 @@
-from odoo import models,fields
+from odoo import models, fields
 
-class biko_oa_wizard(models.TransientModel):
+class Biko_oa_wizard(models.TransientModel):
     _name = 'biko.oa.wizard'
     _description = 'BIKO: Open Academy Wizard'
 
