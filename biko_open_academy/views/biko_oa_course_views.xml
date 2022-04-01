@@ -1,7 +1,7 @@
 <odoo>
     <data>
 
-        <record model="ir.actions.act_window" id="act_biko_oa_courses_list">
+        <record id="biko_oa_courses_action_tree" model="ir.actions.act_window">
             <field name="name">Courses</field>
             <field name="res_model">biko.oa.course</field>
             <field name="view_mode">tree,form</field>
@@ -20,8 +20,8 @@
             </field>
         </record>
 
-        <record id="view_biko_oa_courses_tree" model="ir.ui.view">
-            <field name="name">biko.oa.course.tree</field>
+        <record id="biko_oa_courses_view_tree" model="ir.ui.view">
+            <field name="name">biko.oa.course.view.tree</field>
             <field name="model">biko.oa.course</field>
             <field name="arch" type="xml">
                 <tree>
@@ -32,8 +32,8 @@
             </field>
         </record>
 
-        <record id="view_biko_oa_courses_form" model="ir.ui.view">
-            <field name="name">biko.oa.course.form</field>
+        <record id="biko_oa_courses_view_form" model="ir.ui.view">
+            <field name="name">biko.oa.course.view.form</field>
             <field name="model">biko.oa.course</field>
             <field name="arch" type="xml">
                 <form string = "Course">
@@ -60,8 +60,8 @@
             </field>
         </record>
 
-        <record id="search_biko_oa_courses" model="ir.ui.view">
-            <field name="name">biko.oa.course.search</field>
+        <record id="biko_oa_courses_view_search" model="ir.ui.view">
+            <field name="name">biko.oa.course.view.search</field>
             <field name="model">biko.oa.course</field>
             <field name="arch" type="xml">
                 <search string="Search Courses">

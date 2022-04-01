@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <record id="module_category_openacademy" model="ir.module.category">
+    <record id="biko_oa_category" model="ir.module.category">
         <field name="name">BIKO: Open Academy</field>
         <field name="sequence">1</field>
     </record>
 
-    <record id="group_biko_oa_manager" model="res.groups">
+    <record id="biko_oa_group_manager" model="res.groups">
         <field name="name">Manager</field>
-        <field name="category_id" ref="module_category_openacademy"/>
+        <field name="category_id" ref="biko_oa_category"/>
     </record>
 
 </odoo>

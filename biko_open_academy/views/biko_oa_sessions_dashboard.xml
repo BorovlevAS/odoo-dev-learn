@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="biko_oa_view_dashboard" model="ir.ui.view">
+        <field name="name">Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Open Academy Dashboard">
+                <board style="1">
+
+                    <column>
+                        <action
+                            string="Number of attendees"
+                            name="%(biko_oa_sessions_action_graph)d"/>
+
+                        <action
+                            string="List of courses"
+                            name="%(biko_oa_courses_action_tree)d"/>
+
+                        <action
+                            string="Calendar"
+                            name="%(biko_oa_sessions_action_calendar)d"/>
+                    </column>
+
+               </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="biko_oa_action_dashboard" model="ir.actions.act_window">
+        <field name="name">Open Academy Dashboard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="biko_oa_view_dashboard"/>
+    </record>
+
+</odoo>

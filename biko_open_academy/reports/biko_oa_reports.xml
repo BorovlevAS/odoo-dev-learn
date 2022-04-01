@@ -2,7 +2,7 @@
 
 <odoo>
 
-    <record id="action_sessions_report" model="ir.actions.report">
+    <record id="biko_oa_sessions_action_report" model="ir.actions.report">
         <field name="name">Sessions and attendees</field>
         <field name="model">biko.oa.sessions</field>
         <field name="report_type">qweb-html</field>
