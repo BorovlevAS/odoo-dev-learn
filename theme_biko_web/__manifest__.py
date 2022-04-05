@@ -13,6 +13,15 @@
         'views/options.xml',
     ],
 
+    'images': [
+        'static/description/kea_description.png',
+        'static/description/kea_screenshot.jpg',
+    ],
+    'images_preview_theme': {
+        'website.s_cover_default_image': '/theme_biko_web/static/src/img/s_cover.jpg',
+        'website.s_picture_default_image': '/theme_biko_web/static/src/img/s_picture.jpg',
+    },
+
     'assets': {
         'web.assets_frontend':[
             'theme_biko_web/static/scss/style.scss',
