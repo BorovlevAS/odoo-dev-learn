@@ -8,7 +8,7 @@ class Course(models.Model):
     name = fields.Char(required=True, string="Title")
     description = fields.Char()
     resp_user_id = fields.Many2one('res.users')
-    session_id = fields.One2many('biko.oa.session', 'course')
+    session_ids = fields.One2many('biko.oa.session', 'course')
 
     _sql_constraints = [
         ('name_mustbe_uniq',

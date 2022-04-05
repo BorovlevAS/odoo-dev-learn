@@ -20,7 +20,7 @@
                         <field name="attendee_ids" string="Attendees"/>
                     </sheet>
                     <footer>
-                        <button type="object" name="add_atteendees_to_sessions" class="btn btn-primary"
+                        <button type="object" name="add_attendees_to_sessions" class="btn btn-primary"
                                 string="Add attendees" data-hotkey="q"/>
                         <button string="Cancel" special="cancel" data-hotkey="z"/>
                     </footer>

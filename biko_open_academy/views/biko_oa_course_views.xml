@@ -52,7 +52,7 @@
                                 <field name="description" placeholder="Description of the course..."/>
                             </page>
                             <page string="Sessions">
-                                <field name="session_id"/>
+                                <field name="session_ids"/>
                             </page>
                         </notebook>
                     </sheet>

@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
-from odoo import api, models, fields
+from odoo import api, models, fields, _
 from odoo.exceptions import ValidationError
+from odoo.osv.expression import OR
+
 
 class Sessions(models.Model):
     _name = 'biko.oa.session'
@@ -17,10 +19,12 @@ class Sessions(models.Model):
     taken_seats = fields.Float(compute='_compute_taken_seats')
 
     course = fields.Many2one('biko.oa.course', required=True)
+
     instructor = fields.Many2one('res.partner',
                                  domain="['|', ('teacher', '=', 'teacher_level1'), "
                                         "'|', ('teacher', '=', 'teacher_level2'), "
                                         "('instructor', '=', 'True')]")
+
     attendee_id = fields.Many2many('res.partner', column1='attendee_id', column2='partner_id', string='Attendees list')
     attendees_count = fields.Integer(compute='_compute_attendees_count', store=True)
 
@@ -41,7 +45,7 @@ class Sessions(models.Model):
     def _onchange_seats(self):
         for r in self:
             if r.seats < 0:
-                raise ValidationError("You can't set negative number of seats")
+                raise ValidationError(_("You can't set negative number of seats"))
 
     @api.depends('attendee_id')
     def _compute_attendees_count(self):
@@ -52,9 +56,9 @@ class Sessions(models.Model):
     def _check_instructor_not_attendee(self):
         for r in self:
             if r.seats < len(r.attendee_id):
-                raise ValidationError('There are only %s seats can be taken!' % r.seats)
+                raise ValidationError(_('There are only %s seats can be taken!' % r.seats))
             if r.instructor and r.instructor in r.attendee_id:
-                raise ValidationError("Instructor or teqcher %s can't be attendee!" % r.instructor.name)
+                raise ValidationError(_("Instructor or teacher %s can't be attendee!" % r.instructor.name))
 
 
 
